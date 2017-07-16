@@ -1,0 +1,5 @@
+interface SCXMLImplementation {
+	Interpreter fromURI(DOMString uri);
+
+};
+

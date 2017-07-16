@@ -1,0 +1,18 @@
+interface Interpreter {
+	const int CANCELLED = -2;
+	const int FINISHED = -1;
+	const int FAULTED = 0;
+	const int IDLE = 1;
+	const int INSTANTIATED = 2;
+	const int READY = 3;
+
+	int step();
+	void cancel();
+	void reset();
+	void recieve (DOMString event);
+	void addMonitor(Monitor mon);
+	boolean isIn(DOMString stateId);
+	int getInterpreterState();
+
+};
+
